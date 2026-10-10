@@ -1,0 +1,30 @@
+.section {
+  width: 100%;
+  padding-block: var(--space-xl);
+}
+
+.toned {
+  background-color: var(--color-surface-container-lowest);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.heading {
+  color: var(--color-on-surface);
+}

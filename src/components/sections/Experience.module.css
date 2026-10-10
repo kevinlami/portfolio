@@ -1,0 +1,84 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-container);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.25);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+@media (min-width: 40rem) {
+  .header {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.role {
+  color: var(--color-on-surface);
+  font-weight: 600;
+}
+
+.company {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.period {
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.description {
+  color: var(--color-on-surface-variant);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-container-low);
+}
+
+.metricValue {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.metricLabel {
+  color: var(--color-on-surface-variant);
+  font-weight: 400;
+  letter-spacing: 0;
+}

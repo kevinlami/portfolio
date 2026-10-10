@@ -1,0 +1,47 @@
+import { CopyEmailButton } from '@/components/ui/CopyEmailButton'
+import { Icon } from '@/components/ui/icons'
+import { Section } from '@/components/ui/Section'
+import { contactContent } from '@/content/contact'
+import { profile } from '@/content/profile'
+import styles from './Contact.module.css'
+
+export function Contact() {
+  return (
+    <Section
+      id="contact"
+      label={contactContent.sectionLabel}
+      heading={contactContent.heading}
+      toned
+    >
+      <div className={styles.cta}>
+        <div className={styles.copy}>
+          <p className={`t-body-lg ${styles.statement}`}>{contactContent.statement}</p>
+          <p className={`t-mono-tag ${styles.location}`}>
+            <span className={styles.locationIcon} aria-hidden="true">
+              <Icon name="location" size={16} />
+            </span>
+            {profile.location}
+          </p>
+        </div>
+
+        <div className={styles.actions}>
+          <CopyEmailButton email={profile.email} />
+          <div className={styles.networkLinks}>
+            {profile.socialLinks.map((link) => (
+              <a
+                key={link.label}
+                className={styles.networkLink}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{link.label}</span>
+                <Icon name="arrowOutward" size={14} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+  )
+}

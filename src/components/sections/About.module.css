@@ -1,0 +1,92 @@
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .split {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+/* Narrative column */
+
+.narrative {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.paragraph {
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+}
+
+.indicators {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+}
+
+.indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-container);
+}
+
+.indicatorTitle {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.indicatorDescription {
+  color: var(--color-on-surface-variant);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Tenets column */
+
+.tenets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.tenet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-container);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.25);
+  transition: background-color var(--duration-base) ease;
+}
+
+.tenet:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.tenetTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-on-surface);
+  font-weight: 500;
+}
+
+.tenetIcon {
+  display: flex;
+  color: var(--color-primary);
+}
+
+.tenetDescription {
+  color: var(--color-on-surface-variant);
+}

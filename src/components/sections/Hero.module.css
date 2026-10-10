@@ -1,0 +1,174 @@
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Intermediate hero spacing (docs/DESIGN_SYSTEM.md §5.1 allows deliberate exceptions). */
+  padding-block: 3rem 6rem;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding-block: 8rem;
+  }
+}
+
+/* Atmospheric radial glow, decorative only. */
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+}
+
+.glowCircle {
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top right,
+    color-mix(in srgb, var(--color-secondary-container) 20%, transparent),
+    color-mix(in srgb, var(--color-primary-container) 15%, transparent),
+    transparent
+  );
+  filter: blur(64px);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+/* Badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-container-high);
+  color: var(--color-primary);
+}
+
+.badgeDot {
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+/* Title block */
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 56rem;
+}
+
+.title {
+  color: var(--color-on-surface);
+}
+
+.headline {
+  color: var(--color-primary);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.summary {
+  max-width: 48rem;
+  color: var(--color-on-surface-variant);
+  line-height: 1.67;
+}
+
+/* Actions */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-xs);
+}
+
+/* Connect row */
+
+.connect {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-xs);
+  color: var(--color-on-surface-variant);
+}
+
+.connectLabel {
+  color: var(--color-outline);
+}
+
+.separator {
+  color: var(--color-surface-container-highest);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease;
+}
+
+.socialLink:hover {
+  color: var(--color-primary);
+}
+
+/* Metrics */
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  width: 100%;
+  padding-top: var(--space-md);
+  margin: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-container-low);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.25);
+}
+
+.metricValue {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-primary);
+}
+
+.metricLabel {
+  margin-top: var(--space-xs);
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
