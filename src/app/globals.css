@@ -1,0 +1,76 @@
+:root {
+  /* Core colors — docs/DESIGN_SYSTEM.md §3.1 */
+  --color-bg: #0b0d12;
+  --color-surface: #121620;
+  --color-surface-hover: #191f2c;
+  --color-surface-subtle: #0f131b;
+  --color-border: #252c3a;
+  --color-border-strong: #374154;
+  --color-text: #f3f5f9;
+  --color-text-secondary: #b2bbcb;
+  --color-text-muted: #8994a8;
+  --color-accent: #8b7cff;
+  --color-accent-hover: #a397ff;
+  --color-accent-subtle: #211e3b;
+  --color-on-accent: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:where(a):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
