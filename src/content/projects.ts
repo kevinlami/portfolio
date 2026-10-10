@@ -1,81 +1,63 @@
 import type { ProjectsContent } from '@/types/portfolio'
 
-// PLACEHOLDER CONTENT — replace with verified projects before publishing.
-// Project links stay empty until real repository/live-demo URLs exist; the
-// UI omits them when absent (docs/ARCHITECTURE.md §7).
+// Real personal projects from https://github.com/kevinlami. Descriptions are
+// faithful to each repository's README. Links point to the real repositories.
 export const projectsContent: ProjectsContent = {
-  sectionLabel: '04 // SELECTED WORKS',
-  heading: 'Production Architecture & Systems',
+  sectionLabel: '04 // PROJECTS',
+  heading: 'Selected Projects',
   projects: [
     {
-      id: 'aether-design-system',
-      category: 'SYSTEM // 01',
+      id: 'comic-tracker',
+      category: 'FULL-STACK // 01',
       icon: 'layers',
-      title: 'Aether Design System',
+      title: 'Comic Tracker',
       description:
-        'Multi-brand accessible design token engine and UI library with 45+ headless components and strict WCAG AA adherence.',
-      snippet:
-        'Automated Figma-to-code token sync via GitHub Actions; zero-runtime CSS bundle strategy.',
-      technologies: ['TypeScript', 'Radix UI', 'Tailwind', 'Storybook'],
-      links: [],
+        'Web app for tracking manga, manhwa, manhua, webtoons, and comics — register titles and reading sites, keep every link in one place, and follow reading progress and history.',
+      snippet: 'pnpm monorepo with a typed frontend and a Prisma-backed API.',
+      technologies: ['TypeScript', 'Prisma', 'pnpm'],
+      links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/comic-tracker' }],
     },
     {
-      id: 'pulse-telemetry',
-      category: 'TELEMETRY // 02',
-      icon: 'monitoring',
-      title: 'Pulse Telemetry Dashboard',
+      id: 'dws-blog',
+      category: 'FRONTEND // 02',
+      icon: 'codeBlocks',
+      title: 'DWS Blog',
       description:
-        'High-throughput metrics dashboard rendering 100k+ data points with continuous 60 FPS hardware-accelerated canvas.',
-      snippet:
-        'Offloaded intensive data serialization to Web Workers, eliminating main-thread drops.',
-      technologies: ['Next.js 14', 'WebSockets', 'WebGL', 'TanStack'],
-      links: [],
+        'Feature-based React blog with post listing and detail pages, filtering, sorting, search, and a responsive layout.',
+      snippet: 'Unit and integration tests with Vitest and React Testing Library.',
+      technologies: ['React 19', 'TypeScript', 'Vite', 'styled-components'],
+      links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/DWS-Blog' }],
     },
     {
-      id: 'meridian-micro-frontend',
-      category: 'CONTAINER // 03',
-      icon: 'gridView',
-      title: 'Meridian Micro-Frontend',
-      description:
-        'Enterprise multi-application host container leveraging Module Federation with shared authentication and state.',
-      snippet:
-        'Created runtime dependency deduplication pipeline saving ~1.2MB per federated route.',
-      technologies: ['Module Fed', 'React 18', 'Zustand', 'Turborepo'],
-      links: [],
-    },
-    {
-      id: 'hyperion-headless',
-      category: 'STOREFRONT // 04',
-      icon: 'shoppingBag',
-      title: 'Hyperion Headless',
-      description:
-        'Sub-second global eCommerce storefront utilizing Next.js incremental static regeneration and edge routing.',
-      snippet: 'Achieved 99+ Core Web Vitals on mobile (LCP 1.1s, CLS 0.00, INP 42ms).',
-      technologies: ['Next.js App', 'GraphQL', 'Edge Cache', 'TypeScript'],
-      links: [],
-    },
-    {
-      id: 'devaudit-cli',
-      category: 'TOOLING // 05',
+      id: 'k-recorder',
+      category: 'AUTOMATION // 03',
       icon: 'terminal',
-      title: 'DevAudit Performance CLI',
+      title: 'K-Recorder',
       description:
-        'Developer tooling CLI and GitHub Action validating accessibility standards and bundle budgets in PR checks.',
-      snippet: 'Automated budget guardrails blocking size regressions across monorepo deployments.',
-      technologies: ['Node.js', 'Lighthouse CI', 'AST Parsing', 'TypeScript'],
-      links: [],
+        'Desktop macro recorder built with Python and PySide6 — capture keyboard and mouse sequences and replay them to automate repetitive tasks.',
+      technologies: ['Python', 'PySide6', 'Qt'],
+      links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/k-recorder' }],
     },
     {
-      id: 'canvasflow-editor',
-      category: 'GRAPH // 06',
-      icon: 'accountTree',
-      title: 'CanvasFlow Node Editor',
+      id: 'desafio-mb',
+      category: 'CHALLENGE // 04',
+      icon: 'category',
+      title: 'Registration Form (MB)',
       description:
-        'Interactive visual workflow builder with drag-and-drop node graph routing and deep undo/redo states.',
-      snippet:
-        'Custom vector bezier path calculation with quadtree spatial partitioning for hit-testing.',
-      technologies: ['SVG Engine', 'TypeScript', 'Zustand', 'Tailwind'],
-      links: [],
+        'Registration form for individuals and legal entities driven by a dynamic form schema, with a small Express API behind it.',
+      technologies: ['Vue', 'Vite', 'SCSS', 'Express'],
+      links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/desafio-mb' }],
+    },
+    {
+      id: 'portfolio',
+      category: 'THIS SITE // 05',
+      icon: 'speed',
+      title: 'Portfolio',
+      description:
+        'This site — a personal portfolio built with Next.js App Router, strict TypeScript, CSS Modules, and a full test setup.',
+      snippet: 'Unit tests in Vitest, end-to-end journeys in Cypress, CI with GitHub Actions.',
+      technologies: ['Next.js', 'TypeScript', 'CSS Modules', 'Vitest', 'Cypress'],
+      links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/portfolio' }],
     },
   ],
 }

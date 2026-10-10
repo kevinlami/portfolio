@@ -27,9 +27,10 @@ export interface Profile {
   subtitle: string
   /** Availability badge text. Render only when present. */
   status?: string
-  email: string
-  /** Location or availability statement. */
-  location: string
+  /** Professional email. Omit until verified; UI hides email actions when absent. */
+  email?: string
+  /** Location or availability statement. Render only when present. */
+  location?: string
   socialLinks: SocialLink[]
 }
 

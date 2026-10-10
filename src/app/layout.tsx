@@ -16,11 +16,10 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
-// PLACEHOLDER metadata — update with verified professional details.
 export const metadata: Metadata = {
-  title: 'Alexandre Ramos — Senior Frontend Engineer',
+  title: 'Kevin Lami — Frontend Developer',
   description:
-    'Personal portfolio of a Senior Frontend Engineer focused on web performance, design systems, and scalable frontend architecture.',
+    'Portfolio of Kevin Lami — frontend developer building web applications with React, Vue, and TypeScript.',
 }
 
 export default function RootLayout({

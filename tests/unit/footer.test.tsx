@@ -10,10 +10,14 @@ describe('Footer', () => {
     expect(screen.getByText(new RegExp(profile.fullName))).toBeInTheDocument()
   })
 
-  it('renders a mailto link with the profile email', () => {
+  it('renders a mailto link only when an email is configured', () => {
     render(<Footer />)
 
-    const emailLink = screen.getByRole('link', { name: profile.email })
-    expect(emailLink).toHaveAttribute('href', `mailto:${profile.email}`)
+    if (profile.email) {
+      const emailLink = screen.getByRole('link', { name: profile.email })
+      expect(emailLink).toHaveAttribute('href', `mailto:${profile.email}`)
+    } else {
+      expect(screen.queryByRole('link', { name: /@/ })).not.toBeInTheDocument()
+    }
   })
 })

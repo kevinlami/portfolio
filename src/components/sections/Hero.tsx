@@ -57,30 +57,36 @@ export function Hero() {
               </a>
             </Fragment>
           ))}
-          <span className={styles.separator} aria-hidden="true">
-            ·
-          </span>
-          <a
-            className={`t-mono-tag ${styles.socialLink}`}
-            href={`mailto:${profile.email}`}
-            aria-label={`Email ${profile.fullName}`}
-          >
-            <Icon name="at" size={16} />
-            Email
-          </a>
+          {profile.email ? (
+            <Fragment>
+              <span className={styles.separator} aria-hidden="true">
+                ·
+              </span>
+              <a
+                className={`t-mono-tag ${styles.socialLink}`}
+                href={`mailto:${profile.email}`}
+                aria-label={`Email ${profile.fullName}`}
+              >
+                <Icon name="at" size={16} />
+                Email
+              </a>
+            </Fragment>
+          ) : null}
         </p>
 
-        <ul className={styles.metrics}>
-          {heroContent.metrics.map((metric) => (
-            <li key={metric.label} className={styles.metric}>
-              <span className={`t-mono-metric ${styles.metricValue}`}>
-                {metric.value}
-                {metric.icon ? <Icon name={metric.icon} size={18} /> : null}
-              </span>
-              <span className={`t-mono-tag ${styles.metricLabel}`}>{metric.label}</span>
-            </li>
-          ))}
-        </ul>
+        {heroContent.metrics.length > 0 ? (
+          <ul className={styles.metrics}>
+            {heroContent.metrics.map((metric) => (
+              <li key={metric.label} className={styles.metric}>
+                <span className={`t-mono-metric ${styles.metricValue}`}>
+                  {metric.value}
+                  {metric.icon ? <Icon name={metric.icon} size={18} /> : null}
+                </span>
+                <span className={`t-mono-tag ${styles.metricLabel}`}>{metric.label}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </section>
   )

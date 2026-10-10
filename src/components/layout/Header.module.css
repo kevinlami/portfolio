@@ -197,18 +197,15 @@
 
 .avatar {
   display: none;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
   border-radius: var(--radius-full);
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  object-fit: cover;
 }
 
 @media (min-width: 40rem) {
   .avatar {
-    display: flex;
+    display: block;
   }
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@/components/ui/icons'
 import { navItems, profile } from '@/content/profile'
@@ -52,9 +53,7 @@ export function Header() {
             ))}
           </div>
 
-          <span className={styles.avatar} aria-hidden="true">
-            <Icon name="person" size={18} />
-          </span>
+          <Image className={styles.avatar} src="/avatar.jpg" alt="" width={32} height={32} />
         </div>
       </div>
     </header>

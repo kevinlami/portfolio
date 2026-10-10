@@ -1,36 +1,36 @@
 import type { AboutContent } from '@/types/portfolio'
 
-// PLACEHOLDER CONTENT — replace with verified professional copy before
-// publishing (docs/PROJECT.md §3).
+// Real copy based on the actual public projects on GitHub. Employment
+// history and credentials live in the Experience section / CV only.
 export const aboutContent: AboutContent = {
   sectionLabel: '01 // ABOUT',
-  heading: 'Engineering Philosophy & Approach',
+  heading: 'About Me',
   paragraphs: [
-    'Bridging technical systems architecture with high-fidelity design execution. With a decade leading front-end initiatives for high-scale platforms, I view the web application layer as a precision product—requiring systematic determinism, measurable performance, and strict accessibility.',
-    'My work focuses on eliminating operational friction between cross-functional product design and engineering teams. Through unified token pipelines, zero-runtime overhead styling, and micro-frontend federation, I build architectures that scale gracefully without compromising developer velocity.',
+    'Frontend developer focused on building web applications with React, Vue, and TypeScript — from user interfaces to full-stack features with Node.js and Prisma.',
+    'On the side I maintain personal projects: a manga and webtoon reading tracker, a blog with filtering and search, and Python desktop automation tools. I care about clear, typed code and tested features.',
   ],
   indicators: [
-    { title: '100% TYPED', description: 'Strict TS Contracts' },
-    { title: 'WCAG 2.2 AA', description: 'Accessible Foundation' },
+    { title: 'STACK', description: 'React · Vue · TypeScript' },
+    { title: 'GITHUB', description: '24 Public Repositories' },
   ],
   tenets: [
     {
-      icon: 'category',
-      title: 'Design Systems at Scale',
+      icon: 'codeBlocks',
+      title: 'Clean, Typed Code',
       description:
-        'Multi-brand token architectures supporting synchronized theming across web, iOS, and Android. Powered by automated visual regression checks, contract testing, and headless keyboard-navigable components.',
+        'TypeScript-first projects with strict types and a structure that stays easy to extend.',
     },
     {
-      icon: 'bolt',
-      title: 'Performance as a Feature',
+      icon: 'check',
+      title: 'Tested Features',
       description:
-        'Systematic Core Web Vitals optimization, dynamic route-based bundle splitting, stream hydration protocols, and low-allocation rendering loops ensuring instant time-to-interactive on constrained devices.',
+        'Unit and integration tests with Vitest and React Testing Library on my main projects.',
     },
     {
-      icon: 'security',
-      title: 'Resilient Architecture',
+      icon: 'hub',
+      title: 'Full-Stack Curiosity',
       description:
-        'Clean TypeScript boundaries and schema-validated API data layers. Monorepo setups powered by Turborepo with deterministic build caches and comprehensive end-to-end integration suites.',
+        'Comfortable across the stack: Prisma-backed APIs, Express, and Python automation tools.',
     },
   ],
 }

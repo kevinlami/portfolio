@@ -16,16 +16,18 @@ export function Contact() {
       <div className={styles.cta}>
         <div className={styles.copy}>
           <p className={`t-body-lg ${styles.statement}`}>{contactContent.statement}</p>
-          <p className={`t-mono-tag ${styles.location}`}>
-            <span className={styles.locationIcon} aria-hidden="true">
-              <Icon name="location" size={16} />
-            </span>
-            {profile.location}
-          </p>
+          {profile.location ? (
+            <p className={`t-mono-tag ${styles.location}`}>
+              <span className={styles.locationIcon} aria-hidden="true">
+                <Icon name="location" size={16} />
+              </span>
+              {profile.location}
+            </p>
+          ) : null}
         </div>
 
         <div className={styles.actions}>
-          <CopyEmailButton email={profile.email} />
+          {profile.email ? <CopyEmailButton email={profile.email} /> : null}
           <div className={styles.networkLinks}>
             {profile.socialLinks.map((link) => (
               <a

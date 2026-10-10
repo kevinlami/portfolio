@@ -1,18 +1,22 @@
 import type { NavItem, Profile } from '@/types/portfolio'
 
-// PLACEHOLDER CONTENT — replace with verified professional data before
-// publishing (docs/PROJECT.md §3: do not invent personal details).
+// Real public data.
+// GitHub: https://github.com/kevinlami (24 public repos, verified via API)
+// LinkedIn: https://www.linkedin.com/in/kevin-lami-613019117/
+// Email and location are intentionally omitted until provided and verified;
+// the UI hides email/location actions while they are absent.
 export const profile: Profile = {
-  fullName: 'Alexandre Ramos',
-  monogram: 'AR',
-  title: 'Senior Frontend Engineer',
-  subtitle: 'Senior Frontend Engineer',
-  status: 'Staff/Senior Roles',
-  email: 'alexandre.ramos.eng@gmail.com',
-  location: 'São Paulo / Open to Global Remote (UTC-3)',
+  fullName: 'Kevin Lami',
+  monogram: 'KL',
+  title: 'Frontend Developer',
+  subtitle: 'Frontend Developer',
   socialLinks: [
-    { label: 'GitHub', href: 'https://github.com/alexandreramos', icon: 'terminal' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/alexandreramos-eng', icon: 'badge' },
+    { label: 'GitHub', href: 'https://github.com/kevinlami', icon: 'github' },
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/kevin-lami-613019117/',
+      icon: 'linkedin',
+    },
   ],
 }
 
