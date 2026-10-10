@@ -74,33 +74,42 @@ The following values are the initial design tokens. Keep the palette centralized
 
 ### 3.1 Core Colors
 
-| Token                    | Value     | Purpose                         |
-| ------------------------ | --------- | ------------------------------- |
-| `--color-bg`             | `#0B0D12` | Main page background            |
-| `--color-surface`        | `#121620` | Cards and elevated surfaces     |
-| `--color-surface-hover`  | `#191F2C` | Hovered surfaces                |
-| `--color-surface-subtle` | `#0F131B` | Subtle secondary surfaces       |
-| `--color-border`         | `#252C3A` | Default borders                 |
-| `--color-border-strong`  | `#374154` | Emphasized borders              |
-| `--color-text`           | `#F3F5F9` | Primary text                    |
-| `--color-text-secondary` | `#B2BBCB` | Secondary text                  |
-| `--color-text-muted`     | `#8994A8` | Muted supporting text           |
-| `--color-accent`         | `#8B7CFF` | Primary accent                  |
-| `--color-accent-hover`   | `#A397FF` | Accent hover state              |
-| `--color-accent-subtle`  | `#211E3B` | Subtle accent backgrounds       |
-| `--color-on-accent`      | `#FFFFFF` | Text on accent-colored controls |
+The palette below is the approved source of truth, extracted from the reviewed layout mockup. Names follow the semantic role of each value.
+
+| Token                               | Value     | Purpose                            |
+| ----------------------------------- | --------- | ---------------------------------- |
+| `--color-background`                | `#111318` | Main page background               |
+| `--color-on-background`             | `#E2E2E9` | Text on the main background        |
+| `--color-surface`                   | `#111318` | Base surface                       |
+| `--color-surface-container-lowest`  | `#0C0E13` | Header, footer, alternate sections |
+| `--color-surface-container-low`     | `#1A1B21` | Pills, secondary panels            |
+| `--color-surface-container`         | `#1E1F25` | Cards and elevated surfaces        |
+| `--color-surface-container-high`    | `#282A2F` | Secondary controls, card hover     |
+| `--color-surface-container-highest` | `#33353A` | Strong hover states                |
+| `--color-outline`                   | `#928F9F` | Emphasized outlines                |
+| `--color-outline-variant`           | `#474554` | Subtle borders                     |
+| `--color-on-surface`                | `#E2E2E9` | Primary text                       |
+| `--color-on-surface-variant`        | `#C8C4D6` | Secondary text                     |
+| `--color-primary`                   | `#C7BFFF` | Primary accent                     |
+| `--color-on-primary`                | `#2A039D` | Text on accent-colored controls    |
+| `--color-primary-container`         | `#8E7FFF` | Accent container backgrounds       |
+| `--color-on-primary-container`      | `#24008C` | Text on accent containers          |
+| `--color-primary-fixed`             | `#E4DFFF` | Accent hover state                 |
+| `--color-secondary-container`       | `#44359E` | Subtle accent decoration (glows)   |
+| `--color-on-secondary-container`    | `#B5ABFF` | Text on secondary decoration       |
+| `--color-tertiary`                  | `#B7C8E1` | Secondary accent                   |
+| `--color-success`                   | `#34D399` | Availability/status indicators     |
 
 ### 3.2 Color Usage
 
-- Use `--color-bg` for the primary page background.
-- Use `--color-surface` for project cards, content panels, and other distinct surfaces.
-- Use `--color-surface-hover` for interactive surface hover states.
-- Use `--color-border` for subtle separation.
-- Use `--color-text` for headings and important information.
-- Use `--color-text-secondary` for paragraphs and descriptions.
-- Use `--color-text-muted` for metadata only when contrast remains sufficient.
-- Use `--color-accent` for important links, selected states, and primary actions.
-- Use `--color-accent-subtle` for restrained emphasis.
+- Use `--color-background` for the primary page background.
+- Use `--color-surface-container` for project cards, content panels, and other distinct surfaces.
+- Use `--color-surface-container-lowest` for the header, footer, and alternate section backgrounds.
+- Use `--color-outline-variant` for subtle separation.
+- Use `--color-on-surface` for headings and important information.
+- Use `--color-on-surface-variant` for paragraphs and descriptions.
+- Use `--color-primary` for important links, selected states, and primary actions.
+- Do not use `--color-outline` for small text; it does not reach WCAG AA contrast for body sizes. Use `--color-on-surface-variant` instead.
 
 Do not use the accent color for every link, heading, icon, or decorative element. Establish a clear hierarchy.
 
@@ -114,28 +123,33 @@ Verify text and interactive-state contrast against the actual rendered backgroun
 
 Use a clean sans-serif typeface for general content.
 
-Preferred approach:
+Approved approach (extracted from the reviewed layout mockup):
 
-- Primary font: `Inter`, if it can be loaded reliably without unnecessary third-party dependencies.
-- Fallback: `system-ui`, followed by standard sans-serif fallbacks.
-- Monospace: system monospace stack for code-like labels or technical details, when useful.
+- Primary font: `Geist`, self-hosted through `next/font` (downloaded at build time, served from the application origin — no runtime third-party requests).
+- Monospace: `JetBrains Mono`, also self-hosted through `next/font`, for technical labels, code snippets, and metric values.
+- Fallback: `system-ui`, followed by standard sans-serif and monospace fallbacks.
 
-Avoid requiring a remote font service at runtime. Prefer a reliable system stack or self-hosted font assets when legally and technically appropriate.
+Avoid requiring a remote font service at runtime. Fonts must be bundled with the application, never loaded from a CDN at page load.
 
 ### 4.2 Typography Tokens
 
 Use responsive typography with CSS `clamp()` where appropriate.
 
-| Token              | Suggested size                | Usage                |
-| ------------------ | ----------------------------- | -------------------- |
-| `--font-size-xs`   | `0.75rem`                     | Small metadata       |
-| `--font-size-sm`   | `0.875rem`                    | Supporting labels    |
-| `--font-size-base` | `1rem`                        | Body text            |
-| `--font-size-lg`   | `1.125rem`                    | Emphasized body text |
-| `--font-size-xl`   | `1.25rem`                     | Small headings       |
-| `--font-size-2xl`  | `1.5rem`                      | Section subheadings  |
-| `--font-size-3xl`  | `2rem`                        | Section headings     |
-| `--font-size-hero` | `clamp(2.5rem, 7vw, 4.75rem)` | Main hero heading    |
+| Token                     | Size                          | Line height | Weight | Letter spacing | Usage              |
+| ------------------------- | ----------------------------- | ----------- | ------ | -------------- | ------------------ |
+| `--font-size-display-xl`  | `clamp(2.5rem, 7vw, 4.75rem)` | `1.05`      | `700`  | `-0.03em`      | Main hero heading  |
+| `--font-size-headline-lg` | `2rem` (mobile: `1.625rem`)   | `1.25`      | `600`  | `-0.02em`      | Section headings   |
+| `--font-size-headline-md` | `1.5rem`                      | `1.33`      | `600`  | `-0.015em`     | Hero subtitles     |
+| `--font-size-headline-sm` | `1.25rem`                     | `1.4`       | `500`  | `-0.01em`      | Card titles        |
+| `--font-size-body-lg`     | `1.125rem`                    | `1.67`      | `400`  | `-0.005em`     | Lead paragraphs    |
+| `--font-size-body-md`     | `0.9375rem`                   | `1.6`       | `400`  | `0`            | Body text          |
+| `--font-size-body-sm`     | `0.8125rem`                   | `1.54`      | `400`  | `0.005em`      | Supporting text    |
+| `--font-size-label-ui`    | `0.875rem`                    | `1.29`      | `500`  | `0`            | Buttons and nav    |
+| `--font-size-mono-tag`    | `0.75rem`                     | `1.33`      | `500`  | `0.02em`       | Tags and metadata  |
+| `--font-size-mono-code`   | `0.8125rem`                   | `1.54`      | `400`  | `-0.01em`      | Code-like snippets |
+| `--font-size-mono-metric` | `1.75rem`                     | `1.14`      | `600`  | `-0.02em`      | Metric values      |
+
+The `headline-lg` size scales from `1.625rem` on mobile to `2rem` at the `64rem` breakpoint. The gutter widens from `1.25rem` to `2rem` at the same breakpoint.
 
 ### 4.3 Typography Rules
 
@@ -152,22 +166,16 @@ Use responsive typography with CSS `clamp()` where appropriate.
 
 ### 5.1 Spacing Scale
 
-Use a consistent spacing scale based on multiples of four pixels.
+Use the approved spacing scale from the layout mockup.
 
-| Token        | Value     |
-| ------------ | --------- |
-| `--space-1`  | `0.25rem` |
-| `--space-2`  | `0.5rem`  |
-| `--space-3`  | `0.75rem` |
-| `--space-4`  | `1rem`    |
-| `--space-5`  | `1.25rem` |
-| `--space-6`  | `1.5rem`  |
-| `--space-8`  | `2rem`    |
-| `--space-10` | `2.5rem`  |
-| `--space-12` | `3rem`    |
-| `--space-16` | `4rem`    |
-| `--space-20` | `5rem`    |
-| `--space-24` | `6rem`    |
+| Token        | Value                                |
+| ------------ | ------------------------------------ |
+| `--space-xs` | `0.25rem`                            |
+| `--space-sm` | `0.5rem`                             |
+| `--space-md` | `1rem`                               |
+| `--space-lg` | `1.5rem`                             |
+| `--space-xl` | `2.5rem`                             |
+| `--gutter`   | `1.25rem` (mobile), `2rem` (desktop) |
 
 Intermediate values may be introduced when there is a clear design need. Do not create arbitrary spacing values throughout individual components.
 
@@ -266,13 +274,12 @@ Do not use animated backgrounds or prominent glowing grids as a default visual t
 
 Define the following tokens:
 
-| Token           | Value      | Usage                             |
-| --------------- | ---------- | --------------------------------- |
-| `--radius-sm`   | `0.375rem` | Small labels and compact elements |
-| `--radius-md`   | `0.625rem` | Buttons and standard controls     |
-| `--radius-lg`   | `0.875rem` | Cards and panels                  |
-| `--radius-xl`   | `1.25rem`  | Larger feature surfaces           |
-| `--radius-full` | `9999px`   | Pills and circular elements       |
+| Token           | Value      | Usage                            |
+| --------------- | ---------- | -------------------------------- |
+| `--radius-sm`   | `0.125rem` | Default radius for controls      |
+| `--radius-lg`   | `0.25rem`  | Small cards and panels           |
+| `--radius-xl`   | `0.5rem`   | Cards and feature surfaces       |
+| `--radius-full` | `0.75rem`  | Avatars and large rounded shapes |
 
 Use consistent corner radii.
 
@@ -464,17 +471,19 @@ Rules:
 
 ## 13. Iconography and Assets
 
+Approved approach: a small set of **inline SVG icons** implemented in the codebase (`src/components/ui/icons.tsx`), using `currentColor`, a consistent 24px grid, and a uniform stroke style. No icon font or icon library dependency.
+
 - Prefer simple, consistent icons.
 - Do not mix multiple unrelated icon styles.
 - Use icons only when they improve comprehension.
 - Give icon-only interactive elements accessible names.
-- Decorative icons should not create redundant screen-reader announcements.
+- Decorative icons must be hidden from assistive technologies (`aria-hidden`).
 - Avoid emoji as a substitute for interface icons.
 - Avoid unnecessary external image requests.
 - Optimize any raster or vector assets included in the repository.
 - Ensure all fonts, icons, and other assets have appropriate licensing.
 
-Do not introduce an icon library unless the project actually needs it.
+Do not introduce an icon library or icon font unless the inline SVG set becomes unreasonably large.
 
 ## 14. Design Validation
 
