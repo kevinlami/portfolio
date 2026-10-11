@@ -1,14 +1,31 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { LocaleToggle } from '@/components/layout/LocaleToggle'
 import { Icon } from '@/components/ui/icons'
-import { navItems, profile } from '@/content/profile'
+import type { Locale } from '@/i18n/config'
+import type { NavItem } from '@/types/portfolio'
+import { profile } from '@/content/profile'
 import styles from './Header.module.css'
 
-export function Header() {
+interface HeaderProps {
+  nav: NavItem[]
+  currentLocale: Locale
+  targetLocale: Locale
+  navAriaLabel: string
+  languageToggleAriaLabel: string
+}
+
+export function Header({
+  nav,
+  currentLocale,
+  targetLocale,
+  navAriaLabel,
+  languageToggleAriaLabel,
+}: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <Link href="/" className={styles.brand}>
+        <Link href={`/${currentLocale}`} className={styles.brand}>
           <span className={styles.monogram} aria-hidden="true">
             {profile.monogram}
           </span>
@@ -18,9 +35,9 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className={styles.nav} aria-label="Portfolio sections">
+        <nav className={styles.nav} aria-label={navAriaLabel}>
           <ul className={styles.navList}>
-            {navItems.map((item) => (
+            {nav.map((item) => (
               <li key={item.href}>
                 <a className={styles.navLink} href={item.href}>
                   {item.label}
@@ -31,6 +48,12 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
+          <LocaleToggle
+            currentLocale={currentLocale}
+            targetLocale={targetLocale}
+            ariaLabel={languageToggleAriaLabel}
+          />
+
           {profile.status ? (
             <span className={styles.status}>
               <span className={`animate-pulse ${styles.statusDot}`} aria-hidden="true" />

@@ -1,12 +1,12 @@
 import type { IconName } from '@/components/ui/icons'
 
 /**
- * PLACEHOLDER CONTENT NOTICE
+ * CONTENT NOTICE
  *
- * All data structures in `src/content/` currently hold placeholder content
- * extracted from the approved layout mockup. Replace every value with
- * verified professional data before publishing. Do not publish invented
- * metrics, companies, projects, or claims (docs/PROJECT.md §3).
+ * All text content lives in the per-locale dictionaries under `src/i18n/`
+ * (verified data sourced from the public GitHub profile and the LinkedIn
+ * PDF export). Do not publish invented metrics, companies, projects, or
+ * claims (docs/PROJECT.md §3).
  */
 
 export interface SocialLink {
@@ -53,6 +53,8 @@ export interface HeroContent {
   summary: string
   primaryCta: { label: string; href: string }
   secondaryCta: { label: string; href: string }
+  /** Mono label rendered before the social links row. */
+  connectLabel: string
   metrics: HeroMetric[]
 }
 
@@ -105,7 +107,14 @@ export interface ExperienceEntry {
 export interface ExperienceContent {
   sectionLabel: string
   heading: string
+  /** Rendered while `entries` is empty, pointing to the LinkedIn profile. */
+  emptyText: string
   entries: ExperienceEntry[]
+}
+
+export interface FooterContent {
+  builtWith: string
+  compliance: string
 }
 
 export interface ProjectLink {

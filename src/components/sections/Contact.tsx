@@ -1,11 +1,15 @@
 import { CopyEmailButton } from '@/components/ui/CopyEmailButton'
 import { Icon } from '@/components/ui/icons'
 import { Section } from '@/components/ui/Section'
-import { contactContent } from '@/content/contact'
+import type { ContactContent } from '@/types/portfolio'
 import { profile } from '@/content/profile'
 import styles from './Contact.module.css'
 
-export function Contact() {
+interface ContactProps {
+  content: ContactContent
+}
+
+export function Contact({ content: contactContent }: ContactProps) {
   return (
     <Section
       id="contact"

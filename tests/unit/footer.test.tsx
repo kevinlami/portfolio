@@ -2,16 +2,19 @@ import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Footer } from '@/components/layout/Footer'
 import { profile } from '@/content/profile'
+import { getDictionary } from '@/i18n/dictionaries'
+
+const dict = getDictionary('en')
 
 describe('Footer', () => {
   it('renders the profile name in the copyright notice', () => {
-    render(<Footer />)
+    render(<Footer content={dict.footer} />)
 
     expect(screen.getByText(new RegExp(profile.fullName))).toBeInTheDocument()
   })
 
   it('renders a mailto link only when an email is configured', () => {
-    render(<Footer />)
+    render(<Footer content={dict.footer} />)
 
     if (profile.email) {
       const emailLink = screen.getByRole('link', { name: profile.email })

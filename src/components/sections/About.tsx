@@ -1,9 +1,13 @@
 import { Icon } from '@/components/ui/icons'
 import { Section } from '@/components/ui/Section'
-import { aboutContent } from '@/content/about'
+import type { AboutContent } from '@/types/portfolio'
 import styles from './About.module.css'
 
-export function About() {
+interface AboutProps {
+  content: AboutContent
+}
+
+export function About({ content: aboutContent }: AboutProps) {
   return (
     <Section id="about" label={aboutContent.sectionLabel} heading={aboutContent.heading} toned>
       <div className={styles.split}>

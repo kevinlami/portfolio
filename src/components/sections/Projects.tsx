@@ -1,9 +1,13 @@
 import { ProjectCard } from '@/components/ui/ProjectCard'
 import { Section } from '@/components/ui/Section'
-import { projectsContent } from '@/content/projects'
+import type { ProjectsContent } from '@/types/portfolio'
 import styles from './Projects.module.css'
 
-export function Projects() {
+interface ProjectsProps {
+  content: ProjectsContent
+}
+
+export function Projects({ content: projectsContent }: ProjectsProps) {
   return (
     <Section id="projects" label={projectsContent.sectionLabel} heading={projectsContent.heading}>
       <div className={styles.grid}>

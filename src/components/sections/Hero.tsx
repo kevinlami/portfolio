@@ -1,11 +1,15 @@
 import { Fragment } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/icons'
-import { heroContent } from '@/content/hero'
+import type { HeroContent } from '@/types/portfolio'
 import { profile } from '@/content/profile'
 import styles from './Hero.module.css'
 
-export function Hero() {
+interface HeroProps {
+  content: HeroContent
+}
+
+export function Hero({ content: heroContent }: HeroProps) {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.glow} aria-hidden="true">

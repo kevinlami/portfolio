@@ -1,12 +1,16 @@
 import { Icon } from '@/components/ui/icons'
 import { Section } from '@/components/ui/Section'
-import { experienceContent } from '@/content/experience'
+import type { ExperienceContent } from '@/types/portfolio'
 import { profile } from '@/content/profile'
 import styles from './Experience.module.css'
 
 const linkedin = profile.socialLinks.find((link) => link.label === 'LinkedIn')
 
-export function Experience() {
+interface ExperienceProps {
+  content: ExperienceContent
+}
+
+export function Experience({ content: experienceContent }: ExperienceProps) {
   return (
     <Section
       id="experience"
@@ -16,9 +20,7 @@ export function Experience() {
     >
       {experienceContent.entries.length === 0 ? (
         <div className={styles.empty}>
-          <p className={`t-body-md ${styles.emptyText}`}>
-            My full work and education history is available on my LinkedIn profile.
-          </p>
+          <p className={`t-body-md ${styles.emptyText}`}>{experienceContent.emptyText}</p>
           {linkedin ? (
             <a className={styles.linkedinCta} href={linkedin.href} target="_blank" rel="noreferrer">
               <span>View LinkedIn Profile</span>

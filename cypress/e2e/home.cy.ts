@@ -2,7 +2,9 @@ describe('Home page', () => {
   const sectionIds = ['about', 'skills', 'experience', 'projects', 'contact']
 
   beforeEach(() => {
-    cy.visit('/')
+    // Visit the English locale directly so the spec is independent of the
+    // browser's Accept-Language detection and of the locale cookie.
+    cy.visit('/en')
   })
 
   it('loads the portfolio page with its main heading', () => {

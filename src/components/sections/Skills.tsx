@@ -1,10 +1,14 @@
 import { Badge } from '@/components/ui/Badge'
 import { Icon } from '@/components/ui/icons'
 import { Section } from '@/components/ui/Section'
-import { skillsContent } from '@/content/skills'
+import type { SkillsContent } from '@/types/portfolio'
 import styles from './Skills.module.css'
 
-export function Skills() {
+interface SkillsProps {
+  content: SkillsContent
+}
+
+export function Skills({ content: skillsContent }: SkillsProps) {
   return (
     <Section id="skills" label={skillsContent.sectionLabel} heading={skillsContent.heading}>
       <div className={styles.grid}>

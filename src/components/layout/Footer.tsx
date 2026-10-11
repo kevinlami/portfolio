@@ -1,17 +1,22 @@
+import type { FooterContent } from '@/types/portfolio'
 import { profile } from '@/content/profile'
 import styles from './Footer.module.css'
 
-export function Footer() {
+interface FooterProps {
+  content: FooterContent
+}
+
+export function Footer({ content }: FooterProps) {
   const year = new Date().getFullYear()
 
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <p className={styles.copyright}>
-          © {year} {profile.fullName}. Built with Next.js &amp; CSS Modules.
+          © {year} {profile.fullName}. {content.builtWith}
         </p>
         <p className={styles.meta}>
-          <span>WCAG AA Compliant</span>
+          <span>{content.compliance}</span>
         </p>
         {profile.email ? (
           <p>
