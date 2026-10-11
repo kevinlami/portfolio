@@ -76,7 +76,12 @@
 .period {
   color: var(--color-on-surface-variant);
   font-weight: 500;
-  white-space: nowrap;
+}
+
+@media (min-width: 40rem) {
+  .period {
+    white-space: nowrap;
+  }
 }
 
 .description {
