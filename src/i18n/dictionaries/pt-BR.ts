@@ -169,8 +169,17 @@ export const ptBR: Dictionary = {
         title: 'Comic Tracker',
         description:
           'Aplicação web para acompanhar mangás, manhwas, manhuas, webtoons e quadrinhos — cadastre títulos e sites de leitura, mantenha todos os links em um só lugar e acompanhe o progresso e o histórico de leitura.',
-        snippet: 'Monorepo com pnpm, front-end tipado e API com Prisma.',
-        technologies: ['TypeScript', 'Prisma', 'pnpm'],
+        snippet: 'Monorepo com pnpm: front-end em Next.js, API em NestJS e Prisma com PostgreSQL.',
+        technologies: [
+          'Next.js',
+          'React',
+          'TypeScript',
+          'Tailwind CSS',
+          'NestJS',
+          'Prisma',
+          'PostgreSQL',
+          'pnpm',
+        ],
         links: [
           { label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/comic-tracker' },
         ],
@@ -183,7 +192,17 @@ export const ptBR: Dictionary = {
         description:
           'Blog em React organizado por features, com listagem e página de detalhes de posts, filtros, ordenação, busca e layout responsivo.',
         snippet: 'Testes unitários e de integração com Vitest e React Testing Library.',
-        technologies: ['React 19', 'TypeScript', 'Vite', 'styled-components'],
+        technologies: [
+          'React 19',
+          'TypeScript',
+          'Vite',
+          'styled-components',
+          'React Router',
+          'Axios',
+          'Vitest',
+          'React Testing Library',
+          'ESLint',
+        ],
         links: [{ label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/DWS-Blog' }],
       },
       {
@@ -193,7 +212,7 @@ export const ptBR: Dictionary = {
         title: 'K-Recorder',
         description:
           'Gravador de macros para desktop feito com Python e PySide6 — captura sequências de teclado e mouse e as reproduz para automatizar tarefas repetitivas.',
-        technologies: ['Python', 'PySide6', 'Qt'],
+        technologies: ['Python', 'PySide6', 'PyAutoGUI', 'pynput', 'keyboard', 'OpenCV', 'NumPy'],
         links: [
           { label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/k-recorder' },
         ],
@@ -205,10 +224,31 @@ export const ptBR: Dictionary = {
         title: 'Formulário de Cadastro (MB)',
         description:
           'Formulário de cadastro para pessoas físicas e jurídicas dirigido por um schema dinâmico de formulário, com uma pequena API em Express por trás.',
-        technologies: ['Vue', 'Vite', 'SCSS', 'Express'],
+        technologies: ['Vue 3', 'Vite', 'SCSS', 'Node.js', 'Express', 'CORS'],
         links: [
           { label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/desafio-mb' },
         ],
+      },
+      {
+        id: 'portfolio',
+        category: 'ESTE SITE // 05',
+        icon: 'speed',
+        title: 'Portfólio',
+        description:
+          'Este site — um portfólio pessoal construído com Next.js App Router, TypeScript estrito, CSS Modules e uma suíte completa de testes, com versões em português e inglês.',
+        snippet: 'Testes unitários em Vitest, jornadas e2e em Cypress, CI com GitHub Actions.',
+        technologies: [
+          'Next.js',
+          'React',
+          'TypeScript',
+          'CSS Modules',
+          'Vitest',
+          'React Testing Library',
+          'Cypress',
+          'ESLint',
+          'Prettier',
+        ],
+        links: [{ label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/portfolio' }],
       },
     ],
   },

@@ -177,8 +177,17 @@ export const en = {
         title: 'Comic Tracker',
         description:
           'Web app for tracking manga, manhwa, manhua, webtoons, and comics — register titles and reading sites, keep every link in one place, and follow reading progress and history.',
-        snippet: 'pnpm monorepo with a typed frontend and a Prisma-backed API.',
-        technologies: ['TypeScript', 'Prisma', 'pnpm'],
+        snippet: 'pnpm monorepo: Next.js frontend, NestJS API, Prisma on PostgreSQL.',
+        technologies: [
+          'Next.js',
+          'React',
+          'TypeScript',
+          'Tailwind CSS',
+          'NestJS',
+          'Prisma',
+          'PostgreSQL',
+          'pnpm',
+        ],
         links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/comic-tracker' }],
       },
       {
@@ -189,7 +198,17 @@ export const en = {
         description:
           'Feature-based React blog with post listing and detail pages, filtering, sorting, search, and a responsive layout.',
         snippet: 'Unit and integration tests with Vitest and React Testing Library.',
-        technologies: ['React 19', 'TypeScript', 'Vite', 'styled-components'],
+        technologies: [
+          'React 19',
+          'TypeScript',
+          'Vite',
+          'styled-components',
+          'React Router',
+          'Axios',
+          'Vitest',
+          'React Testing Library',
+          'ESLint',
+        ],
         links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/DWS-Blog' }],
       },
       {
@@ -199,7 +218,7 @@ export const en = {
         title: 'K-Recorder',
         description:
           'Desktop macro recorder built with Python and PySide6 — capture keyboard and mouse sequences and replay them to automate repetitive tasks.',
-        technologies: ['Python', 'PySide6', 'Qt'],
+        technologies: ['Python', 'PySide6', 'PyAutoGUI', 'pynput', 'keyboard', 'OpenCV', 'NumPy'],
         links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/k-recorder' }],
       },
       {
@@ -209,8 +228,29 @@ export const en = {
         title: 'Registration Form (MB)',
         description:
           'Registration form for individuals and legal entities driven by a dynamic form schema, with a small Express API behind it.',
-        technologies: ['Vue', 'Vite', 'SCSS', 'Express'],
+        technologies: ['Vue 3', 'Vite', 'SCSS', 'Node.js', 'Express', 'CORS'],
         links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/desafio-mb' }],
+      },
+      {
+        id: 'portfolio',
+        category: 'THIS SITE // 05',
+        icon: 'speed',
+        title: 'Portfolio',
+        description:
+          'This site — a personal portfolio built with Next.js App Router, strict TypeScript, CSS Modules, and a full test setup, with English and Portuguese versions.',
+        snippet: 'Unit tests in Vitest, end-to-end journeys in Cypress, CI with GitHub Actions.',
+        technologies: [
+          'Next.js',
+          'React',
+          'TypeScript',
+          'CSS Modules',
+          'Vitest',
+          'React Testing Library',
+          'Cypress',
+          'ESLint',
+          'Prettier',
+        ],
+        links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/portfolio' }],
       },
     ],
   } satisfies ProjectsContent,
