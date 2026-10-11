@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, JetBrains_Mono } from 'next/font/google'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
+import { BackToTopButton } from '@/components/ui/BackToTopButton'
 import { defaultLocale, isLocale, locales, otherLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/dictionaries'
 import '../globals.css'
@@ -64,6 +65,7 @@ export default async function RootLayout({
           {children}
         </main>
         <Footer content={dict.footer} />
+        <BackToTopButton ariaLabel={dict.layout.backToTopAriaLabel} />
       </body>
     </html>
   )

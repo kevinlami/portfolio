@@ -16,6 +16,7 @@ export type IconName =
   | 'mail'
   | 'at'
   | 'arrowForward'
+  | 'arrowUp'
   | 'arrowOutward'
   | 'openInNew'
   | 'copy'
@@ -69,6 +70,12 @@ const paths: Record<StrokeIconName, ReactElement> = {
     <>
       <line x1="5" y1="12" x2="19" y2="12" />
       <polyline points="12 5 19 12 12 19" />
+    </>
+  ),
+  arrowUp: (
+    <>
+      <line x1="12" y1="19" x2="12" y2="5" />
+      <polyline points="5 12 12 5 19 12" />
     </>
   ),
   arrowOutward: (

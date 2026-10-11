@@ -16,6 +16,7 @@ export const en = {
     skipToContent: 'Skip to main content',
     navAriaLabel: 'Portfolio sections',
     languageToggleAriaLabel: 'Switch language',
+    backToTopAriaLabel: 'Back to top',
   },
   nav: [
     { label: 'About', href: '#about' },

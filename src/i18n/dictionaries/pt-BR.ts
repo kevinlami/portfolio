@@ -6,6 +6,7 @@ export const ptBR: Dictionary = {
     skipToContent: 'Pular para o conteúdo principal',
     navAriaLabel: 'Seções do portfólio',
     languageToggleAriaLabel: 'Mudar idioma',
+    backToTopAriaLabel: 'Voltar ao topo',
   },
   nav: [
     { label: 'Sobre', href: '#about' },
