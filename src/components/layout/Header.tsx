@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { LocaleToggle } from '@/components/layout/LocaleToggle'
+import { MobileNav } from '@/components/layout/MobileNav'
 import { Icon } from '@/components/ui/icons'
 import type { Locale } from '@/i18n/config'
 import type { NavItem } from '@/types/portfolio'
@@ -13,6 +14,8 @@ interface HeaderProps {
   targetLocale: Locale
   navAriaLabel: string
   languageToggleAriaLabel: string
+  openMenuAriaLabel: string
+  closeMenuAriaLabel: string
 }
 
 export function Header({
@@ -21,6 +24,8 @@ export function Header({
   targetLocale,
   navAriaLabel,
   languageToggleAriaLabel,
+  openMenuAriaLabel,
+  closeMenuAriaLabel,
 }: HeaderProps) {
   return (
     <header className={styles.header}>
@@ -77,6 +82,13 @@ export function Header({
           </div>
 
           <Image className={styles.avatar} src="/avatar.jpg" alt="" width={32} height={32} />
+
+          <MobileNav
+            nav={nav}
+            navAriaLabel={navAriaLabel}
+            openMenuAriaLabel={openMenuAriaLabel}
+            closeMenuAriaLabel={closeMenuAriaLabel}
+          />
         </div>
       </div>
     </header>

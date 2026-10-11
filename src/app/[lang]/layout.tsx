@@ -60,6 +60,8 @@ export default async function RootLayout({
           targetLocale={otherLocale(locale)}
           navAriaLabel={dict.layout.navAriaLabel}
           languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+          openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+          closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
         />
         <main id="main-content" className="main">
           {children}

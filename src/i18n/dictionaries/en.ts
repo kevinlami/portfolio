@@ -17,6 +17,8 @@ export const en = {
     navAriaLabel: 'Portfolio sections',
     languageToggleAriaLabel: 'Switch language',
     backToTopAriaLabel: 'Back to top',
+    openMenuAriaLabel: 'Open menu',
+    closeMenuAriaLabel: 'Close menu',
   },
   nav: [
     { label: 'About', href: '#about' },

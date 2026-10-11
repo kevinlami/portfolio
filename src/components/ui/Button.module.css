@@ -1,7 +1,9 @@
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-xs);
+  min-height: 2.75rem;
   padding: 0.625rem var(--space-lg);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-label-ui);

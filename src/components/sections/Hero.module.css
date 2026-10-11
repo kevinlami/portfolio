@@ -93,10 +93,20 @@
 
 .actions {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: var(--space-md);
   padding-top: var(--space-xs);
+  width: 100%;
+}
+
+@media (min-width: 30rem) {
+  .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+  }
 }
 
 /* Connect row */

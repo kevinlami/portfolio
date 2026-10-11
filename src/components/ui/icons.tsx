@@ -38,6 +38,8 @@ export type IconName =
   | 'shoppingBag'
   | 'accountTree'
   | 'speed'
+  | 'menu'
+  | 'close'
 
 type StrokeIconName = Exclude<IconName, 'github' | 'linkedin'>
 
@@ -211,6 +213,19 @@ const paths: Record<StrokeIconName, ReactElement> = {
     <>
       <path d="M12 15 16.5 10.5" />
       <path d="M3.5 18a10 10 0 1 1 17 0" />
+    </>
+  ),
+  menu: (
+    <>
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </>
+  ),
+  close: (
+    <>
+      <line x1="6" y1="6" x2="18" y2="18" />
+      <line x1="18" y1="6" x2="6" y2="18" />
     </>
   ),
 }

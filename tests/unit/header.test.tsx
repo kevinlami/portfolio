@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Header } from '@/components/layout/Header'
 import { profile } from '@/content/profile'
@@ -15,6 +15,8 @@ describe('Header', () => {
         targetLocale="pt-BR"
         navAriaLabel={dict.layout.navAriaLabel}
         languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
       />
     )
 
@@ -30,6 +32,8 @@ describe('Header', () => {
         targetLocale="pt-BR"
         navAriaLabel={dict.layout.navAriaLabel}
         languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
       />
     )
 
@@ -50,6 +54,8 @@ describe('Header', () => {
         targetLocale="pt-BR"
         navAriaLabel={dict.layout.navAriaLabel}
         languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
       />
     )
 
@@ -66,6 +72,8 @@ describe('Header', () => {
         targetLocale="pt-BR"
         navAriaLabel={dict.layout.navAriaLabel}
         languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
       />
     )
 
@@ -85,6 +93,8 @@ describe('Header', () => {
         targetLocale="pt-BR"
         navAriaLabel={dict.layout.navAriaLabel}
         languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
       />
     )
 
@@ -93,5 +103,68 @@ describe('Header', () => {
     } else {
       expect(screen.queryByText(/Roles/)).not.toBeInTheDocument()
     }
+  })
+
+  it('opens and closes the mobile navigation panel', () => {
+    render(
+      <Header
+        nav={dict.nav}
+        currentLocale="en"
+        targetLocale="pt-BR"
+        navAriaLabel={dict.layout.navAriaLabel}
+        languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
+      />
+    )
+
+    const toggle = screen.getByRole('button', { name: dict.layout.openMenuAriaLabel })
+    expect(toggle).toHaveAttribute('aria-expanded', 'false')
+
+    fireEvent.click(toggle)
+
+    const closeButton = screen
+      .getAllByRole('button', { name: dict.layout.closeMenuAriaLabel })
+      .find((button) => button.hasAttribute('aria-expanded'))!
+    expect(closeButton).toHaveAttribute('aria-expanded', 'true')
+
+    for (const item of dict.nav) {
+      expect(screen.getAllByRole('link', { name: item.label }).length).toBeGreaterThan(0)
+    }
+
+    fireEvent.click(closeButton)
+
+    expect(screen.getByRole('button', { name: dict.layout.openMenuAriaLabel })).toHaveAttribute(
+      'aria-expanded',
+      'false'
+    )
+  })
+
+  it('closes the mobile navigation panel after selecting a link', () => {
+    render(
+      <Header
+        nav={dict.nav}
+        currentLocale="en"
+        targetLocale="pt-BR"
+        navAriaLabel={dict.layout.navAriaLabel}
+        languageToggleAriaLabel={dict.layout.languageToggleAriaLabel}
+        openMenuAriaLabel={dict.layout.openMenuAriaLabel}
+        closeMenuAriaLabel={dict.layout.closeMenuAriaLabel}
+      />
+    )
+
+    fireEvent.click(screen.getByRole('button', { name: dict.layout.openMenuAriaLabel }))
+
+    const panel = document.getElementById('mobile-nav-panel')
+    expect(panel).not.toBeNull()
+    const [firstLink] = dict.nav
+    fireEvent.click(
+      Array.from(panel!.querySelectorAll('a')).find((link) => link.textContent === firstLink.label)!
+    )
+
+    expect(screen.getByRole('button', { name: dict.layout.openMenuAriaLabel })).toHaveAttribute(
+      'aria-expanded',
+      'false'
+    )
   })
 })
