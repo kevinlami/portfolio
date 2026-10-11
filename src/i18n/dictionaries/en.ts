@@ -38,32 +38,14 @@ export const en = {
     sectionLabel: '01 // ABOUT',
     heading: 'About Me',
     paragraphs: [
-      'Senior Frontend Engineer with a professional path since 2017, building React, Vue, and TypeScript applications for e-commerce, public sector, and enterprise systems — from componentization and design systems to REST API integrations.',
-      'On the side I maintain personal projects: a manga and webtoon reading tracker, a blog with filtering and search, and Python desktop automation tools. I care about clear, typed code and tested features.',
+      'Senior Frontend Engineer building applications with React, Vue, and TypeScript since 2017, for e-commerce platforms, public-sector systems, and enterprise products.',
+      'Day to day: componentization and design systems, REST API integrations, unit testing with Vitest and React Testing Library, and code quality with SonarQube and ESLint — in Scrum/Kanban teams.',
+      'In my free time I maintain personal projects: a manga and webtoon reading tracker, a blog with filtering and search, and Python desktop automation tools.',
     ],
-    indicators: [
-      { title: 'STACK', description: 'React · Vue · TypeScript' },
-      { title: 'EXPERIENCE', description: 'Professional since 2017' },
-    ],
-    tenets: [
-      {
-        icon: 'codeBlocks',
-        title: 'Clean, Typed Code',
-        description:
-          'TypeScript-first projects with strict types and a structure that stays easy to extend.',
-      },
-      {
-        icon: 'check',
-        title: 'Tested Features',
-        description:
-          'Unit and integration tests with Vitest and React Testing Library on my main projects.',
-      },
-      {
-        icon: 'hub',
-        title: 'Full-Stack Curiosity',
-        description:
-          'Comfortable across the stack: Prisma-backed APIs, Express, and Python automation tools.',
-      },
+    highlights: [
+      { icon: 'layers', label: 'Componentization & Design Systems' },
+      { icon: 'check', label: 'Typed Code & Unit Testing' },
+      { icon: 'speed', label: 'Web Performance' },
     ],
   } satisfies AboutContent,
   skills: {

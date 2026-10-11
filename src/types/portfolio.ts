@@ -58,23 +58,17 @@ export interface HeroContent {
   metrics: HeroMetric[]
 }
 
-export interface AboutIndicator {
-  title: string
-  description: string
-}
-
-export interface AboutTenet {
+export interface AboutHighlight {
   icon: IconName
-  title: string
-  description: string
+  label: string
 }
 
 export interface AboutContent {
   sectionLabel: string
   heading: string
   paragraphs: string[]
-  indicators: AboutIndicator[]
-  tenets: AboutTenet[]
+  /** Compact icon chips rendered after the narrative paragraphs. */
+  highlights: AboutHighlight[]
 }
 
 export interface SkillCategory {

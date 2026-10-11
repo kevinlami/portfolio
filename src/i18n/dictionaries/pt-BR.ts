@@ -29,32 +29,14 @@ export const ptBR: Dictionary = {
     sectionLabel: '01 // SOBRE',
     heading: 'Sobre Mim',
     paragraphs: [
-      'Engenheiro Front-End Sênior com trajetória profissional desde 2017, construindo aplicações em React, Vue e TypeScript para e-commerce, setor público e sistemas corporativos — da componentização e design systems a integrações com APIs REST.',
-      'Nas horas livres mantenho projetos pessoais: um gerenciador de leitura de mangás e webtoons, um blog com filtros e busca e ferramentas de automação em Python para desktop. Gosto de código claro, tipado e com features testadas.',
+      'Engenheiro Front-End Sênior construindo aplicações com React, Vue e TypeScript desde 2017, para plataformas de e-commerce, sistemas do setor público e produtos corporativos.',
+      'No dia a dia: componentização e design systems, integrações com APIs REST, testes unitários com Vitest e React Testing Library e qualidade de código com SonarQube e ESLint — em times Scrum/Kanban.',
+      'Nas horas livres mantenho projetos pessoais: um gerenciador de leitura de mangás e webtoons, um blog com filtros e busca e ferramentas de automação em Python para desktop.',
     ],
-    indicators: [
-      { title: 'STACK', description: 'React · Vue · TypeScript' },
-      { title: 'EXPERIÊNCIA', description: 'Na profissão desde 2017' },
-    ],
-    tenets: [
-      {
-        icon: 'codeBlocks',
-        title: 'Código Limpo e Tipado',
-        description:
-          'Projetos TypeScript-first com tipos estritos e uma estrutura que continua fácil de estender.',
-      },
-      {
-        icon: 'check',
-        title: 'Features Testadas',
-        description:
-          'Testes unitários e de integração com Vitest e React Testing Library nos meus principais projetos.',
-      },
-      {
-        icon: 'hub',
-        title: 'Curiosidade Full-Stack',
-        description:
-          'Confortável em toda a stack: APIs com Prisma, Express e ferramentas de automação em Python.',
-      },
+    highlights: [
+      { icon: 'layers', label: 'Componentização & Design Systems' },
+      { icon: 'check', label: 'Código Tipado & Testes Unitários' },
+      { icon: 'speed', label: 'Performance Web' },
     ],
   },
   skills: {
