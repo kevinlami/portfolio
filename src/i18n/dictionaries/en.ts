@@ -119,7 +119,7 @@ export const en = {
       {
         role: 'Senior Frontend Developer',
         company: 'Solutis Tecnologias',
-        period: 'Sep 2026 — Present · Curitiba, PR, Brazil',
+        period: 'Sep 2026 — Present · Remote',
         description:
           "Consulting firm allocated to the Ministério Público da Bahia (Bahia State Public Prosecutor's Office): development, maintenance, and evolution of Front-End applications with React, TypeScript, and Material UI, applying Hooks, componentization, and Design System. Focus on performance, unit testing, SonarQube, and ESLint, with Scrum/Kanban task management via Redmine.",
         metrics: [],
@@ -127,7 +127,7 @@ export const en = {
       {
         role: 'Senior Frontend Developer',
         company: 'Qintess',
-        period: 'Apr 2026 — Sep 2026 (6 months)',
+        period: 'Apr 2026 — Sep 2026 (6 months) · Remote',
         description:
           "Allocated to the Ministério Público da Bahia (Bahia State Public Prosecutor's Office): development and evolution of Front-End applications with React, TypeScript, and Material UI, integrating REST APIs, with unit testing and quality analysis via SonarQube and ESLint. Collaboration with Backend, UX/UI, and Product teams in Scrum/Kanban.",
         metrics: [],
@@ -135,7 +135,7 @@ export const en = {
       {
         role: 'Mid-Level Frontend Developer',
         company: 'Qintess',
-        period: 'Jun 2025 — Apr 2026 (11 months)',
+        period: 'Jun 2025 — Apr 2026 (11 months) · Remote',
         description:
           'Implementation of new features and evolutionary maintenance of Ministério Público da Bahia production applications, with React, TypeScript, and Material UI, applying componentization, state management, and Front-End architecture best practices.',
         metrics: [],
@@ -143,7 +143,7 @@ export const en = {
       {
         role: 'Mid-Level Developer',
         company: 'Linx (Grupo Stone)',
-        period: 'Aug 2021 — Jun 2025 (3 yrs 11 mos) · Florianópolis, SC, Brazil',
+        period: 'Aug 2021 — Jun 2025 (3 yrs 11 mos) · Remote',
         description:
           'Maintenance and evolution of e-commerce applications with React, Vue.js, and JavaScript, integrated with REST APIs and the VTEX platform. CI/CD implementation with GitHub Actions and CircleCI, demand management in Jira and Asana, plus code review and continuous delivery.',
         metrics: [],
@@ -151,7 +151,7 @@ export const en = {
       {
         role: 'Junior Developer',
         company: 'Celula4',
-        period: 'Jun 2017 — Jan 2021 (3 yrs 8 mos) · Florianópolis, Brazil',
+        period: 'Jun 2017 — Jan 2021 (3 yrs 8 mos) · On-site · Florianópolis, Brazil',
         description:
           'Development and maintenance of corporate systems for public-sector organizations with Vue.js, JavaScript, jQuery, and Bootstrap, integrated with a PHP REST API (Zend Framework, Doctrine ORM) and MySQL, following MVC architecture.',
         metrics: [],
@@ -159,7 +159,7 @@ export const en = {
       {
         role: 'Intern',
         company: 'Labtrans',
-        period: '2014 — 2016 (2 yrs) · Florianópolis, Brazil',
+        period: '2014 — 2016 (2 yrs) · On-site · Florianópolis, Brazil',
         description:
           'Development and maintenance of MVC-architecture web systems with C#, ASP.NET MVC, and SQL Server, including database modeling and responsive interfaces with Bootstrap.',
         metrics: [],
@@ -211,17 +211,6 @@ export const en = {
           'Registration form for individuals and legal entities driven by a dynamic form schema, with a small Express API behind it.',
         technologies: ['Vue', 'Vite', 'SCSS', 'Express'],
         links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/desafio-mb' }],
-      },
-      {
-        id: 'portfolio',
-        category: 'THIS SITE // 05',
-        icon: 'speed',
-        title: 'Portfolio',
-        description:
-          'This site — a personal portfolio built with Next.js App Router, strict TypeScript, CSS Modules, and a full test setup.',
-        snippet: 'Unit tests in Vitest, end-to-end journeys in Cypress, CI with GitHub Actions.',
-        technologies: ['Next.js', 'TypeScript', 'CSS Modules', 'Vitest', 'Cypress'],
-        links: [{ label: 'GitHub Repo', href: 'https://github.com/kevinlami/portfolio' }],
       },
     ],
   } satisfies ProjectsContent,

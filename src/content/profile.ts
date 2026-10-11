@@ -11,7 +11,7 @@ export const profile: Profile = {
   title: 'Senior Frontend Engineer',
   subtitle: 'Senior Frontend Engineer · React & TypeScript',
   email: 'kevinlami15@gmail.com',
-  location: 'Florianópolis, SC',
+  location: 'Curitiba, PR',
   socialLinks: [
     { label: 'GitHub', href: 'https://github.com/kevinlami', icon: 'github' },
     {

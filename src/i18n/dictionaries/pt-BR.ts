@@ -111,7 +111,7 @@ export const ptBR: Dictionary = {
       {
         role: 'Desenvolvedor Front-End Sênior',
         company: 'Solutis Tecnologias',
-        period: 'set. 2026 — Atual · Curitiba, PR',
+        period: 'set. 2026 — Atual · Remoto',
         description:
           'Consultoria alocada no Ministério Público da Bahia: desenvolvimento, sustentação e evolução de aplicações Front-End com React, TypeScript e Material UI, aplicando Hooks, componentização e Design System. Foco em performance, testes unitários, SonarQube e ESLint, com gestão de tarefas em Scrum/Kanban via Redmine.',
         metrics: [],
@@ -119,7 +119,7 @@ export const ptBR: Dictionary = {
       {
         role: 'Desenvolvedor Front-End Sênior',
         company: 'Qintess',
-        period: 'abr. 2026 — set. 2026 (6 meses)',
+        period: 'abr. 2026 — set. 2026 (6 meses) · Remoto',
         description:
           'Alocado no Ministério Público da Bahia: desenvolvimento e evolução de aplicações Front-End com React, TypeScript e Material UI, com integração a APIs REST, testes unitários e qualidade via SonarQube e ESLint. Colaboração com Backend, UX/UI e Produto em Scrum/Kanban.',
         metrics: [],
@@ -127,7 +127,7 @@ export const ptBR: Dictionary = {
       {
         role: 'Desenvolvedor Front-End Pleno',
         company: 'Qintess',
-        period: 'jun. 2025 — abr. 2026 (11 meses)',
+        period: 'jun. 2025 — abr. 2026 (11 meses) · Remoto',
         description:
           'Implementação de novas funcionalidades e manutenção evolutiva de aplicações do Ministério Público da Bahia, com React, TypeScript e Material UI, aplicando componentização, gerenciamento de estado e boas práticas de arquitetura Front-End.',
         metrics: [],
@@ -135,7 +135,7 @@ export const ptBR: Dictionary = {
       {
         role: 'Desenvolvedor Pleno',
         company: 'Linx (Grupo Stone)',
-        period: 'ago. 2021 — jun. 2025 (3 anos 11 meses) · Florianópolis, SC',
+        period: 'ago. 2021 — jun. 2025 (3 anos 11 meses) · Remoto',
         description:
           'Sustentação e evolução de aplicações de e-commerce com React, Vue.js e JavaScript, integradas a APIs REST e à plataforma VTEX. Implementação de CI/CD com GitHub Actions e CircleCI, gestão de demandas em Jira e Asana, e participação em code review e entregas contínuas.',
         metrics: [],
@@ -143,7 +143,7 @@ export const ptBR: Dictionary = {
       {
         role: 'Desenvolvedor Júnior',
         company: 'Celula4',
-        period: 'jun. 2017 — jan. 2021 (3 anos 8 meses) · Florianópolis',
+        period: 'jun. 2017 — jan. 2021 (3 anos 8 meses) · Presencial · Florianópolis, SC',
         description:
           'Desenvolvimento e manutenção de sistemas corporativos para órgãos públicos com Vue.js, JavaScript, jQuery e Bootstrap, integrados a uma API REST em PHP (Zend Framework, Doctrine ORM) e MySQL, seguindo arquitetura MVC.',
         metrics: [],
@@ -151,7 +151,7 @@ export const ptBR: Dictionary = {
       {
         role: 'Estagiário',
         company: 'Labtrans',
-        period: '2014 — 2016 (2 anos) · Florianópolis',
+        period: '2014 — 2016 (2 anos) · Presencial · Florianópolis, SC',
         description:
           'Desenvolvimento e manutenção de sistemas web em arquitetura MVC com C#, ASP.NET MVC e SQL Server, incluindo modelagem de banco de dados e interfaces responsivas com Bootstrap.',
         metrics: [],
@@ -209,17 +209,6 @@ export const ptBR: Dictionary = {
         links: [
           { label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/desafio-mb' },
         ],
-      },
-      {
-        id: 'portfolio',
-        category: 'ESTE SITE // 05',
-        icon: 'speed',
-        title: 'Portfólio',
-        description:
-          'Este site — um portfólio pessoal construído com Next.js App Router, TypeScript estrito, CSS Modules e uma suíte completa de testes.',
-        snippet: 'Testes unitários em Vitest, jornadas e2e em Cypress, CI com GitHub Actions.',
-        technologies: ['Next.js', 'TypeScript', 'CSS Modules', 'Vitest', 'Cypress'],
-        links: [{ label: 'Repositório no GitHub', href: 'https://github.com/kevinlami/portfolio' }],
       },
     ],
   },
